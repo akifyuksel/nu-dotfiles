@@ -11,7 +11,3 @@ def launch-intellij [project_path: string] {
 def copy-to-clipboard [] {
     run-external powershell '-c' $'Set-Clipboard -Value ($in)'
 }
-
-def vpn-is-active [] {
-  ipconfig | lines | where { |line| $line =~ 'IPv4.*\: 10\.179' } | is-not-empty
-}
