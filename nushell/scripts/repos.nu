@@ -1,5 +1,22 @@
+def _list-repos [] {
+  ls --short-names $git_repos_dir | where type == dir | get name | to text
+}
+
+alias repos = cd $git_repos_dir
+
+# --env so that the call to the cd command and setjava persists to the caller of this command, cd sets $env.PWD
+def --env repo [query: string = ""] {
+  let selectedRepo = _list-repos | fzf --query=$'($query)' --select-1
+  if ( $selectedRepo | is-empty ) {
+    print 'No repository selected.'
+    return
+  }
+  let directory: string = [ $git_repos_dir $selectedRepo ] | path join
+  cd $directory
+}
+
 export def clone [query: string = ''] {
-    let repos = fetch-azure-repos
+    let repos = fetch-repos
     let repo_name = $repos | get name | to text | fzf --query=$'($query)' --select-1
     let repo = $repos | where name == $repo_name | first
 
@@ -22,7 +39,7 @@ export def clone-all-repos [] {
     }
 }
 
-export def azr [] {
+export def myr [] {
     let repo_name = $env.PWD | path basename
     start $'https://github.com/akifyuksel/($repo_name)'
 }
