@@ -5,4 +5,3 @@ alias dotfiles = cd $dotfiles_clone_location
 #alias commands = start https://bitbucket.topaas.ns.nl/projects/ATLAS/repos/dotfiles/browse/nushell/doc/commandlist.md
 alias m = mvn
 alias cat = bat
-alias sprint = start https://dev.azure.com/ns-topaas/RBP/_sprints/taskboard/Team%20ReisinformatieBronnen

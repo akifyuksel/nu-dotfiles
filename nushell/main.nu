@@ -1,4 +1,4 @@
-print '🔥🔥🔥 Congratulations, you are using the personal dotfiles nushell scripts! 🔥🔥🔥'
+print '🔥🔥🔥 Congratulations, you are using the Nu dotfiles nushell scripts! 🔥🔥🔥'
 print "Type "commands" to view a list of commands you now have at your fingertips, along with a description.\n"
 
 # disable the welcome banner
