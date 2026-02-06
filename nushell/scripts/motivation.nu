@@ -16,7 +16,7 @@ def motivate [] {
     'Knowledge illuminates the path'
     'Patience is beautiful - (Qurʼan 12:83)'
     'The best among you are those who learn'
-    'My potential isn\'t something for you to decide.'
+    "My potential isn't something for you to decide"
     'Kamehameha your way to success'
     'Ultra instinct mode activated'
     'Spirit bomb of productivity'
