@@ -1,4 +1,4 @@
-let tools = [ rg bat fd fzf starship az k9s ]
+let tools = [ rg bat fd fzf starship k9s ]
 
 $tools | each { |tool|
           # new record

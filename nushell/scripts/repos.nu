@@ -30,7 +30,7 @@ export def azr [] {
 def fetch-repos []: nothing -> table {
     print 'Fetching list of Repos... (this may take a moment)'
     # use explicit subscription and project so this will still work even if the user has switched to another default
-    git repos list --subscription https://https://github.com/akifyuksel/ | from json | select name remoteUrl
+    curl -s "https://api.github.com/users/akifyuksel/repos" | from json | each { |repo| {name: $repo.name, remoteUrl: $repo.clone_url} }
 }
 
 def clone-repo [repo_name: string, remoteUrl: string]: nothing -> string {
