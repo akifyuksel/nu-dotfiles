@@ -7,7 +7,6 @@ const dotfiles_clone_location = $'($git_repos_dir)/nu-dotfiles'
 
 load-env {
   'EDITOR': 'vi'
-  # 'VPN_START_MANUALLY': 'true' # exact value does not matter, presence of the variable is enough
 }
 
 source ([$dotfiles_clone_location nushell main.nu] | path join)

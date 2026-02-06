@@ -11,7 +11,3 @@ def launch-intellij [project_path: string] {
 def copy-to-clipboard [] {
     $in | pbcopy
 }
-
-def vpn-is-active [] {
-  sys net | get ip | flatten | where address =~ 10\.179 | is-not-empty
-}
