@@ -9,5 +9,5 @@ style = 'red bold'
 
 [github]
 format = 'on [$symbol($username)]($style) '
-symbol = '🐙 '
+symbol = '🐦‍🔥 '
 style = 'purple bold'
