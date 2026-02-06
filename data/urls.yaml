@@ -1,4 +1,6 @@
-#TODO: add urls
-#example:
-#- name: eFlint in Scala
-#  url: https://github.com/akifyuksel/eFLINT-in-Scala
+- name: Perplexity
+  url: https://www.perplexity.ai/
+- name: My Github
+  url: https://github.com/akifyuksel
+- name: Tamers Github
+  url: https://github.com/tamersahin
