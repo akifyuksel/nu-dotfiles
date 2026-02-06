@@ -32,7 +32,7 @@ export def clone [query: string = ''] {
 export def clone-all-repos [] {
     let repos = fetch-repos
     let current_repos = _list-repos
-    let repos_to_clone = $repos | where name in repos | where name not-in $current_repos
+    let repos_to_clone = $repos | where name not-in $current_repos
 
     for repo in $repos_to_clone {
         clone-repo $repo.name $repo.remoteUrl
