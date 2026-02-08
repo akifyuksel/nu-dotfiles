@@ -1,5 +1,4 @@
-print '🔥🔥🔥 Congratulations, you are using the Nu dotfiles nushell scripts! 🔥🔥🔥'
-print "Type "commands" to view a list of commands you now have at your fingertips, along with a description.\n"
+print "🔥🔥🔥 Congratulations, you are using the Nu dotfiles nushell scripts! 🔥🔥🔥 \n"
 
 # disable the welcome banner
 $env.config.show_banner = false
@@ -18,7 +17,5 @@ source scripts/intellij.nu
 source scripts/starship.nu
 source scripts/motivation.nu
 use scripts/url.nu *
-
-print "🩷 Reminder to keep up-to-date by periodically running: dotfiles; pull\n"
 
 motivate
