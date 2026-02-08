@@ -1,4 +1,4 @@
-$env.PATH ++= [ '/bin' '/sbin' '/usr/local/bin' '/usr/local/sbin' '/opt/homebrew/bin' '/opt/homebrew/sbin' ]
+$env.PATH ++= [ '/bin' '/sbin' '/usr/local/bin' '/usr/local/sbin' '/opt/homebrew/bin' '/opt/homebrew/sbin' '/Users/akif/.bun/bin' ]
 
 let _application_paths = ['/Applications', ($nu.home-dir + '/Applications')] | where { |path| $path | path exists }
 let _all_applications = $_application_paths | | each {|path| ls --short-names $path} | flatten
