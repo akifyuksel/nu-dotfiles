@@ -1,12 +1,15 @@
 let tools = [ rg bat fd fzf starship k9s ]
 
-$tools | each { |tool|
+let results = $tools | each { |tool|
           # new record
           { tool: $tool
-            is-installed: ($tool | _is-installed | _to-emoji)
+            is-installed: ($tool | _is-installed)
           }
        }
-       | print
+
+if not ($results | get is-installed | all {|it| $it}) {
+    $results | each { |r| $r | upsert is-installed ($r.is-installed | _to-emoji) } | print
+}
 
 def _is-installed []: string -> bool {
   which $in | is-not-empty
